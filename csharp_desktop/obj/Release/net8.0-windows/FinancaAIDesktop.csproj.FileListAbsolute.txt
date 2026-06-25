@@ -1,3 +1,0 @@
-C:\Users\medei\Downloads\IA-financeira-PC\csharp_desktop\obj\Release\net8.0-windows\App.baml
-C:\Users\medei\Downloads\IA-financeira-PC\csharp_desktop\obj\Release\net8.0-windows\App.g.cs
-C:\Users\medei\Downloads\IA-financeira-PC\csharp_desktop\obj\Release\net8.0-windows\FinancaAIDesktop_MarkupCompile.cache

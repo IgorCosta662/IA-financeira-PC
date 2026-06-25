@@ -35,14 +35,14 @@
                 </StackPanel>
 
                 <!-- Menu Options -->
-                <StackPanel Grid.Row="1" Spacing="4">
-                    <Button Content="📊 Painel Geral" Click="NavDashboard_Click" Style="{StaticResource SidebarBtnStyle}" x:Name="BtnNavDashboard" Background="#1e293b" Foreground="White" />
-                    <Button Content="🏦 Contas Bancárias" Click="NavAccounts_Click" Style="{StaticResource SidebarBtnStyle}" x:Name="BtnNavAccounts" />
-                    <Button Content="💳 Cartões de Crédito" Click="NavCards_Click" Style="{StaticResource SidebarBtnStyle}" x:Name="BtnNavCards" />
-                    <Button Content="💸 Registrar Transação" Click="NavTransactions_Click" Style="{StaticResource SidebarBtnStyle}" x:Name="BtnNavTransactions" />
-                    <Button Content="📈 Investimentos" Click="NavInvestments_Click" Style="{StaticResource SidebarBtnStyle}" x:Name="BtnNavInvestments" />
-                    <Button Content="💬 Consultor de IA" Click="NavChat_Click" Style="{StaticResource SidebarBtnStyle}" x:Name="BtnNavChat" />
-                    <Button Content="⚙️ Configurações" Click="NavSettings_Click" Style="{StaticResource SidebarBtnStyle}" x:Name="BtnNavSettings" />
+                <StackPanel Grid.Row="1">
+                    <Button Content="📊 Painel Geral" Click="NavDashboard_Click" Style="{StaticResource SidebarBtnStyle}" x:Name="BtnNavDashboard" Background="#1e293b" Foreground="White" Margin="0,0,0,4" />
+                    <Button Content="🏦 Contas Bancárias" Click="NavAccounts_Click" Style="{StaticResource SidebarBtnStyle}" x:Name="BtnNavAccounts" Margin="0,0,0,4" />
+                    <Button Content="💳 Cartões de Crédito" Click="NavCards_Click" Style="{StaticResource SidebarBtnStyle}" x:Name="BtnNavCards" Margin="0,0,0,4" />
+                    <Button Content="💸 Registrar Transação" Click="NavTransactions_Click" Style="{StaticResource SidebarBtnStyle}" x:Name="BtnNavTransactions" Margin="0,0,0,4" />
+                    <Button Content="📈 Investimentos" Click="NavInvestments_Click" Style="{StaticResource SidebarBtnStyle}" x:Name="BtnNavInvestments" Margin="0,0,0,4" />
+                    <Button Content="💬 Consultor de IA" Click="NavChat_Click" Style="{StaticResource SidebarBtnStyle}" x:Name="BtnNavChat" Margin="0,0,0,4" />
+                    <Button Content="⚙️ Configurações" Click="NavSettings_Click" Style="{StaticResource SidebarBtnStyle}" x:Name="BtnNavSettings" Margin="0,0,0,4" />
                 </StackPanel>
 
                 <!-- User Footer Badge -->
@@ -236,21 +236,21 @@
                         </ListView>
                     </Border>
                     <Border Grid.Column="1" Style="{StaticResource CardStyle}">
-                        <StackPanel Spacing="12">
-                            <TextBlock Text="Criar Nova Conta" FontSize="16" FontWeight="Bold" Foreground="White" Margin="0,0,0,8" />
-                            <TextBlock Text="Nome da Conta" FontSize="11" Foreground="{StaticResource TextSecondary}" />
-                            <TextBox x:Name="TxtNewAccName" PlaceholderText="Ex: Itaú Uniclass" />
+                        <StackPanel>
+                            <TextBlock Text="Criar Nova Conta" FontSize="16" FontWeight="Bold" Foreground="White" Margin="0,0,0,12" />
+                            <TextBlock Text="Nome da Conta" FontSize="11" Foreground="{StaticResource TextSecondary}" Margin="0,0,0,4" />
+                            <TextBox x:Name="TxtNewAccName" Margin="0,0,0,12" />
                             
-                            <TextBlock Text="Tipo" FontSize="11" Foreground="{StaticResource TextSecondary}" />
-                            <ComboBox x:Name="CboNewAccType">
+                            <TextBlock Text="Tipo" FontSize="11" Foreground="{StaticResource TextSecondary}" Margin="0,0,0,4" />
+                            <ComboBox x:Name="CboNewAccType" Margin="0,0,0,12">
                                 <ComboBoxItem Content="Conta Corrente" IsSelected="True" Tag="checking" />
                                 <ComboBoxItem Content="Poupança / Reserva" Tag="savings" />
                                 <ComboBoxItem Content="Carteira Digital" Tag="digital_wallet" />
                                 <ComboBoxItem Content="Dinheiro em Mãos" Tag="cash" />
                             </ComboBox>
 
-                            <TextBlock Text="Saldo Inicial" FontSize="11" Foreground="{StaticResource TextSecondary}" />
-                            <TextBox x:Name="TxtNewAccBalance" Text="0" />
+                            <TextBlock Text="Saldo Inicial" FontSize="11" Foreground="{StaticResource TextSecondary}" Margin="0,0,0,4" />
+                            <TextBox x:Name="TxtNewAccBalance" Text="0" Margin="0,0,0,12" />
 
                             <Button Content="💾 Adicionar Conta" Click="BtnAddAccount_Click" Background="{StaticResource AccentGreen}" Margin="0,8,0,0" />
                         </StackPanel>
@@ -289,28 +289,28 @@
                         </ListView>
                     </Border>
                     <Border Grid.Column="1" Style="{StaticResource CardStyle}">
-                        <StackPanel Spacing="12">
-                            <TextBlock Text="Adicionar Cartão" FontSize="16" FontWeight="Bold" Foreground="White" Margin="0,0,0,8" />
+                        <StackPanel>
+                            <TextBlock Text="Adicionar Cartão" FontSize="16" FontWeight="Bold" Foreground="White" Margin="0,0,0,12" />
                             
-                            <TextBlock Text="Instituição/Banco" FontSize="11" Foreground="{StaticResource TextSecondary}" />
-                            <TextBox x:Name="TxtNewCardBank" PlaceholderText="Ex: NuBank" />
+                            <TextBlock Text="Instituição/Banco" FontSize="11" Foreground="{StaticResource TextSecondary}" Margin="0,0,0,4" />
+                            <TextBox x:Name="TxtNewCardBank" Margin="0,0,0,12" />
 
-                            <TextBlock Text="Apelido do Cartão" FontSize="11" Foreground="{StaticResource TextSecondary}" />
-                            <TextBox x:Name="TxtNewCardName" PlaceholderText="Ex: Principal" />
+                            <TextBlock Text="Apelido do Cartão" FontSize="11" Foreground="{StaticResource TextSecondary}" Margin="0,0,0,4" />
+                            <TextBox x:Name="TxtNewCardName" Margin="0,0,0,12" />
 
-                            <TextBlock Text="Bandeira" FontSize="11" Foreground="{StaticResource TextSecondary}" />
-                            <ComboBox x:Name="CboNewCardBrand">
+                            <TextBlock Text="Bandeira" FontSize="11" Foreground="{StaticResource TextSecondary}" Margin="0,0,0,4" />
+                            <ComboBox x:Name="CboNewCardBrand" Margin="0,0,0,12">
                                 <ComboBoxItem Content="Visa" IsSelected="True" Tag="visa" />
                                 <ComboBoxItem Content="Mastercard" Tag="mastercard" />
                                 <ComboBoxItem Content="Elo" Tag="elo" />
                                 <ComboBoxItem Content="Amex" Tag="amex" />
                             </ComboBox>
 
-                            <TextBlock Text="Limite Total" FontSize="11" Foreground="{StaticResource TextSecondary}" />
-                            <TextBox x:Name="TxtNewCardLimit" Text="1000" />
+                            <TextBlock Text="Limite Total" FontSize="11" Foreground="{StaticResource TextSecondary}" Margin="0,0,0,4" />
+                            <TextBox x:Name="TxtNewCardLimit" Text="1000" Margin="0,0,0,12" />
 
-                            <TextBlock Text="Dia do Vencimento" FontSize="11" Foreground="{StaticResource TextSecondary}" />
-                            <TextBox x:Name="TxtNewCardDue" Text="10" />
+                            <TextBlock Text="Dia do Vencimento" FontSize="11" Foreground="{StaticResource TextSecondary}" Margin="0,0,0,4" />
+                            <TextBox x:Name="TxtNewCardDue" Text="10" Margin="0,0,0,12" />
 
                             <Button Content="💾 Adicionar Cartão" Click="BtnAddCard_Click" Background="{StaticResource AccentPurple}" Margin="0,8,0,0" />
                         </StackPanel>
@@ -353,26 +353,26 @@
                         </ListView>
                     </Border>
                     <Border Grid.Column="1" Style="{StaticResource CardStyle}">
-                        <StackPanel Spacing="12">
-                            <TextBlock Text="Nova Transação" FontSize="16" FontWeight="Bold" Foreground="White" Margin="0,0,0,8" />
+                        <StackPanel>
+                            <TextBlock Text="Nova Transação" FontSize="16" FontWeight="Bold" Foreground="White" Margin="0,0,0,12" />
 
-                            <TextBlock Text="Tipo" FontSize="11" Foreground="{StaticResource TextSecondary}" />
-                            <ComboBox x:Name="CboNewTransType">
+                            <TextBlock Text="Tipo" FontSize="11" Foreground="{StaticResource TextSecondary}" Margin="0,0,0,4" />
+                            <ComboBox x:Name="CboNewTransType" Margin="0,0,0,12">
                                 <ComboBoxItem Content="Saída / Despesa" IsSelected="True" Tag="expense" />
                                 <ComboBoxItem Content="Entrada / Receita" Tag="income" />
                             </ComboBox>
 
-                            <TextBlock Text="Descrição" FontSize="11" Foreground="{StaticResource TextSecondary}" />
-                            <TextBox x:Name="TxtNewTransDesc" PlaceholderText="Ex: Compra de Mercado" />
+                            <TextBlock Text="Descrição" FontSize="11" Foreground="{StaticResource TextSecondary}" Margin="0,0,0,4" />
+                            <TextBox x:Name="TxtNewTransDesc" Margin="0,0,0,12" />
 
-                            <TextBlock Text="Valor" FontSize="11" Foreground="{StaticResource TextSecondary}" />
-                            <TextBox x:Name="TxtNewTransAmount" Text="0.00" />
+                            <TextBlock Text="Valor" FontSize="11" Foreground="{StaticResource TextSecondary}" Margin="0,0,0,4" />
+                            <TextBox x:Name="TxtNewTransAmount" Text="0.00" Margin="0,0,0,12" />
 
-                            <TextBlock Text="Categoria" FontSize="11" Foreground="{StaticResource TextSecondary}" />
-                            <TextBox x:Name="TxtNewTransCategory" PlaceholderText="Ex: Lazer, Alimentação" />
+                            <TextBlock Text="Categoria" FontSize="11" Foreground="{StaticResource TextSecondary}" Margin="0,0,0,4" />
+                            <TextBox x:Name="TxtNewTransCategory" Margin="0,0,0,12" />
 
-                            <TextBlock Text="Conta de Origem" FontSize="11" Foreground="{StaticResource TextSecondary}" />
-                            <ComboBox x:Name="CboNewTransAccount" DisplayMemberPath="Name" SelectedValuePath="Id" />
+                            <TextBlock Text="Conta de Origem" FontSize="11" Foreground="{StaticResource TextSecondary}" Margin="0,0,0,4" />
+                            <ComboBox x:Name="CboNewTransAccount" DisplayMemberPath="Name" SelectedValuePath="Id" Margin="0,0,0,12" />
 
                             <Button Content="💾 Confirmar Lançamento" Click="BtnAddTransaction_Click" Background="{StaticResource AccentBlue}" Margin="0,8,0,0" />
                         </StackPanel>
@@ -411,23 +411,23 @@
                         </ListView>
                     </Border>
                     <Border Grid.Column="1" Style="{StaticResource CardStyle}">
-                        <StackPanel Spacing="12">
-                            <TextBlock Text="Adicionar Ativo" FontSize="16" FontWeight="Bold" Foreground="White" Margin="0,0,0,8" />
+                        <StackPanel>
+                            <TextBlock Text="Adicionar Ativo" FontSize="16" FontWeight="Bold" Foreground="White" Margin="0,0,0,12" />
 
-                            <TextBlock Text="Nome do Ativo" FontSize="11" Foreground="{StaticResource TextSecondary}" />
-                            <TextBox x:Name="TxtNewInvName" PlaceholderText="Ex: Tesouro Selic 2029" />
+                            <TextBlock Text="Nome do Ativo" FontSize="11" Foreground="{StaticResource TextSecondary}" Margin="0,0,0,4" />
+                            <TextBox x:Name="TxtNewInvName" Margin="0,0,0,12" />
 
-                            <TextBlock Text="Tipo de Ativo" FontSize="11" Foreground="{StaticResource TextSecondary}" />
-                            <TextBox x:Name="TxtNewInvType" PlaceholderText="Ex: Renda Fixa, Ações, FIIs" />
+                            <TextBlock Text="Tipo de Ativo" FontSize="11" Foreground="{StaticResource TextSecondary}" Margin="0,0,0,4" />
+                            <TextBox x:Name="TxtNewInvType" Margin="0,0,0,12" />
 
-                            <TextBlock Text="Valor Investido" FontSize="11" Foreground="{StaticResource TextSecondary}" />
-                            <TextBox x:Name="TxtNewInvInvested" Text="0.00" />
+                            <TextBlock Text="Valor Investido" FontSize="11" Foreground="{StaticResource TextSecondary}" Margin="0,0,0,4" />
+                            <TextBox x:Name="TxtNewInvInvested" Text="0.00" Margin="0,0,0,12" />
 
-                            <TextBlock Text="Valor Atualizado" FontSize="11" Foreground="{StaticResource TextSecondary}" />
-                            <TextBox x:Name="TxtNewInvCurrent" Text="0.00" />
+                            <TextBlock Text="Valor Atualizado" FontSize="11" Foreground="{StaticResource TextSecondary}" Margin="0,0,0,4" />
+                            <TextBox x:Name="TxtNewInvCurrent" Text="0.00" Margin="0,0,0,12" />
 
-                            <TextBlock Text="Taxa de Rendimento (% a.a.)" FontSize="11" Foreground="{StaticResource TextSecondary}" />
-                            <TextBox x:Name="TxtNewInvRate" Text="10.00" />
+                            <TextBlock Text="Taxa de Rendimento (% a.a.)" FontSize="11" Foreground="{StaticResource TextSecondary}" Margin="0,0,0,4" />
+                            <TextBox x:Name="TxtNewInvRate" Text="10.00" Margin="0,0,0,12" />
 
                             <Button Content="💾 Gravar Ativo" Click="BtnAddInvestment_Click" Background="{StaticResource AccentBlue}" Margin="0,8,0,0" />
                         </StackPanel>
@@ -490,7 +490,7 @@
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="100" />
                     </Grid.ColumnDefinitions>
-                    <TextBox x:Name="TxtChatMsg" PlaceholderText="Escreva uma mensagem ou peça ideias sobre como investir..." Height="42" FontSize="13" KeyDown="TxtChatMsg_KeyDown" Padding="12,10" />
+                    <TextBox x:Name="TxtChatMsg" Height="42" FontSize="13" KeyDown="TxtChatMsg_KeyDown" Padding="12,10" />
                     <Button Grid.Column="1" Content="Enviar 🚀" Click="BtnSendChat_Click" Margin="8,0,0,0" Height="42" Background="{StaticResource AccentBlue}" />
                 </Grid>
             </Grid>
@@ -507,10 +507,10 @@
                 </StackPanel>
                 <Border Grid.Row="1" Style="{StaticResource CardStyle}">
                     <ScrollViewer VerticalScrollBarVisibility="Auto">
-                        <StackPanel Spacing="16" MaxWidth="600" HorizontalAlignment="Left" Margin="8">
+                        <StackPanel MaxWidth="600" HorizontalAlignment="Left" Margin="8">
                             
-                            <TextBlock Text="Dados Gerais do Usuário" FontSize="16" FontWeight="Bold" Foreground="White" />
-                            <Grid>
+                            <TextBlock Text="Dados Gerais do Usuário" FontSize="16" FontWeight="Bold" Foreground="White" Margin="0,0,0,16" />
+                            <Grid Margin="0,0,0,16">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />
@@ -529,40 +529,40 @@
                                 </StackPanel>
                             </Grid>
 
-                            <Separator Background="{StaticResource BorderLight}" Margin="0,8" />
+                            <Separator Background="{StaticResource BorderLight}" Margin="0,8,0,16" />
 
-                            <TextBlock Text="Configurações de Provedores de IA" FontSize="16" FontWeight="Bold" Foreground="White" />
+                            <TextBlock Text="Configurações de Provedores de IA" FontSize="16" FontWeight="Bold" Foreground="White" Margin="0,0,0,16" />
                             
-                            <TextBlock Text="Provedor Ativo" FontSize="11" Foreground="{StaticResource TextSecondary}" />
-                            <ComboBox x:Name="CboSettingsProvider" SelectionChanged="CboSettingsProvider_SelectionChanged">
+                            <TextBlock Text="Provedor Ativo" FontSize="11" Foreground="{StaticResource TextSecondary}" Margin="0,0,0,4" />
+                            <ComboBox x:Name="CboSettingsProvider" SelectionChanged="CboSettingsProvider_SelectionChanged" Margin="0,0,0,16">
                                 <ComboBoxItem Content="Google Gemini" Tag="gemini" IsSelected="True" />
                                 <ComboBoxItem Content="OpenAI (ChatGPT)" Tag="openai" />
                                 <ComboBoxItem Content="NVIDIA NIM" Tag="nvidia" />
                                 <ComboBoxItem Content="Customizado (Groq, DeepSeek, etc)" Tag="custom_openai" />
                             </ComboBox>
 
-                            <TextBlock Text="Nome do Modelo" FontSize="11" Foreground="{StaticResource TextSecondary}" />
-                            <TextBox x:Name="TxtSettingsModel" Text="gemini-2.5-flash" />
+                            <TextBlock Text="Nome do Modelo" FontSize="11" Foreground="{StaticResource TextSecondary}" Margin="0,0,0,4" />
+                            <TextBox x:Name="TxtSettingsModel" Text="gemini-2.5-flash" Margin="0,0,0,16" />
 
                             <!-- Contextual Credentials Inputs -->
-                            <StackPanel x:Name="PanelGeminiCreds">
+                            <StackPanel x:Name="PanelGeminiCreds" Margin="0,0,0,16">
                                 <TextBlock Text="Chave de API do Gemini (Opcional)" FontSize="11" Foreground="{StaticResource TextSecondary}" Margin="0,0,0,4" />
-                                <TextBox x:Name="TxtSettingsGeminiKey" PlaceholderText="Deixe vazio para usar a chave do servidor" />
+                                <TextBox x:Name="TxtSettingsGeminiKey" />
                             </StackPanel>
 
-                            <StackPanel x:Name="PanelOpenAiCreds" Visibility="Collapsed">
+                            <StackPanel x:Name="PanelOpenAiCreds" Visibility="Collapsed" Margin="0,0,0,16">
                                 <TextBlock Text="Chave de API da OpenAI" FontSize="11" Foreground="{StaticResource TextSecondary}" Margin="0,0,0,4" />
-                                <TextBox x:Name="TxtSettingsOpenAiKey" PlaceholderText="sk-proj-..." />
+                                <TextBox x:Name="TxtSettingsOpenAiKey" />
                             </StackPanel>
 
-                            <StackPanel x:Name="PanelNvidiaCreds" Visibility="Collapsed">
+                            <StackPanel x:Name="PanelNvidiaCreds" Visibility="Collapsed" Margin="0,0,0,16">
                                 <TextBlock Text="Chave de API da NVIDIA NIM" FontSize="11" Foreground="{StaticResource TextSecondary}" Margin="0,0,0,4" />
-                                <TextBox x:Name="TxtSettingsNvidiaKey" PlaceholderText="nvapi-..." />
+                                <TextBox x:Name="TxtSettingsNvidiaKey" />
                             </StackPanel>
 
-                            <StackPanel x:Name="PanelCustomCreds" Visibility="Collapsed" Spacing="8">
-                                <TextBlock Text="Base URL" FontSize="11" Foreground="{StaticResource TextSecondary}" />
-                                <TextBox x:Name="TxtSettingsCustomBase" PlaceholderText="Ex: https://api.groq.com/openai/v1" />
+                            <StackPanel x:Name="PanelCustomCreds" Visibility="Collapsed">
+                                <TextBlock Text="Base URL" FontSize="11" Foreground="{StaticResource TextSecondary}" Margin="0,0,0,4" />
+                                <TextBox x:Name="TxtSettingsCustomBase" Margin="0,0,0,16" />
                             </StackPanel>
 
                             <Button Content="💾 Salvar Configurações" Click="BtnSaveSettings_Click" Background="{StaticResource AccentGreen}" Margin="0,12,0,0" Width="180" HorizontalAlignment="Left" />
