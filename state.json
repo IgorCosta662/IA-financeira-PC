@@ -1,0 +1,121 @@
+{
+  "accounts": [
+    {
+      "id": "acc-1",
+      "name": "Carteira Principal",
+      "type": "checking",
+      "balance": 1500.00,
+      "color": "#3b82f6"
+    },
+    {
+      "id": "acc-2",
+      "name": "Reserva de Emerg\u00EAncia",
+      "type": "savings",
+      "balance": 5000.00,
+      "color": "#10b981"
+    }
+  ],
+  "cards": [
+    {
+      "id": "card-1",
+      "bank": "NuBank",
+      "cardName": "Roxinho",
+      "brand": "mastercard",
+      "limit": 3000.00,
+      "closingDay": 5,
+      "dueDay": 10,
+      "color": "#8b5cf6"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "t-1",
+      "description": "Sal\u00E1rio Mensal",
+      "amount": 3500.00,
+      "type": "income",
+      "date": "2026-06-25",
+      "category": "Sal\u00E1rio",
+      "accountId": "acc-1",
+      "cardId": null,
+      "installmentsCount": null,
+      "currentInstallment": null,
+      "originalTransactionId": null
+    },
+    {
+      "id": "t-2",
+      "description": "Supermercado Copa",
+      "amount": 250.00,
+      "type": "expense",
+      "date": "2026-06-25",
+      "category": "Alimenta\u00E7\u00E3o",
+      "accountId": "acc-1",
+      "cardId": null,
+      "installmentsCount": null,
+      "currentInstallment": null,
+      "originalTransactionId": null
+    }
+  ],
+  "investments": [
+    {
+      "id": "inv-1",
+      "name": "Tesouro Selic 2029",
+      "type": "Renda Fixa",
+      "investedAmount": 2000.00,
+      "currentAmount": 2120.50,
+      "yieldRate": 10.75,
+      "dividendsReceived": 0,
+      "purchaseDate": "2025-12-25"
+    }
+  ],
+  "debtors": [
+    {
+      "id": "deb-1",
+      "name": "Amigo Carlos",
+      "amount": 150.00,
+      "date": "2026-06-25",
+      "observation": "Empr\u00E9stimo almo\u00E7o",
+      "status": "pending"
+    }
+  ],
+  "creditors": [
+    {
+      "id": "cred-1",
+      "creditor": "Banco de Financiamento",
+      "amount": 12000.00,
+      "date": "2026-06-25",
+      "installmentsCount": 24,
+      "currentInstallment": 6,
+      "interestRate": 1.5,
+      "status": "pending"
+    }
+  ],
+  "goals": [
+    {
+      "id": "goal-1",
+      "name": "Viagem de Fim de Ano",
+      "targetAmount": 5000.00,
+      "currentAmount": 1200.00,
+      "deadline": "2026-12-25",
+      "category": "Lazer"
+    }
+  ],
+  "settings": {
+    "userName": "Usu\u00E1rio C#",
+    "currency": "BRL",
+    "hideBalanceDefault": false,
+    "themeColor": "blue",
+    "customGeminiKey": "",
+    "selectedModel": "gemini-2.5-flash",
+    "selectedAgent": "default",
+    "selectedProvider": "gemini",
+    "customOpenAiKey": null,
+    "customNvidiaKey": null,
+    "customOpenAiBase": null,
+    "customOpenAiModel": null
+  },
+  "security": {
+    "pinEnabled": false,
+    "pinCode": "",
+    "isLocked": false
+  }
+}
