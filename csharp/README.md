@@ -1,18 +1,41 @@
-# 🚀 Finança AI Ultimate - Edição C# (.NET 8)
+# 🚀 Finança AI Ultimate - Edição de Console C# (.NET 8)
 
-Esta pasta contém o ecossistema completo de backend da aplicação **Finança AI** reescrito em **C# e ASP.NET Core (.NET 8.0)**, projetado com arquitetura de alta performance utilizando **Minimal APIs**, injeção de dependência e suporte nativo a múltiplos provedores de inteligência artificial.
+Esta pasta contém o aplicativo completo **Finança AI** reescrito em **C# e .NET 8.0** como um programa de terminal interativo (Console App) de alta performance. 
 
-## 🎯 Visão Geral da Arquitetura
+Diferente do backend web tradicional, este programa é **100% autônomo** e roda inteiramente dentro da sua janela do terminal de comandos, sem depender de navegadores web!
 
-Este backend espelha com precisão a estrutura e o comportamento de controle de dados e agentes de IA implementados na versão original em TypeScript, permitindo que você:
+## 🎯 Funcionalidades
 
-1. **Persista seu estado completo localmente** em um arquivo estruturado `state.json`.
-2. **Execute o Assistente de IA de Finanças** integrando:
-   - **Google Gemini v1beta** (usando o endpoint otimizado com `systemInstruction`).
-   - **OpenAI API** (ChatGPT com modelos como `gpt-4o-mini`).
+Este aplicativo C# espelha com fidelidade todos os recursos do aplicativo original:
+
+1. **Painel Financeiro Completo**: Visualização unificada de saldos, limites e investimentos.
+2. **Gerenciamento de Contas**: Adicione e gerencie suas contas bancárias (Corrente, Poupança, Dinheiro em mãos).
+3. **Cartões de Crédito**: Acompanhe o limite e o dia do vencimento dos seus cartões.
+4. **Registrador de Transações**: Lance receitas e despesas que atualizam o saldo das suas contas automaticamente em tempo real.
+5. **Investimentos & Patrimônio**: Acompanhe a valorização de ativos e as taxas estimadas de rendimento anual.
+6. **Devedores e Credores**: Registre quem deve dinheiro a você e acompanhe o pagamento de parcelas de suas próprias dívidas.
+7. **Metas Financeiras**: Crie metas de economia (como viagens ou compras) e adicione fundos conforme economiza.
+8. **💬 Chat Integrado com Inteligência Artificial**: Converse diretamente com o seu Consultor Virtual utilizando:
+   - **Google Gemini v1beta** (com a chave do servidor ou sua chave pessoal).
+   - **OpenAI (ChatGPT)** (com suporte a modelos como `gpt-4o-mini`).
    - **NVIDIA NIM** (Llama 3.1, Nemotron, Mistral).
-   - **Provedores Customizados** compatíveis com o padrão da OpenAI.
-3. **Selecione os mesmos 6 Agentes Estratégicos** (Tony Investidor, Silas Poupador, Sofia Professora, Arthur Terapeuta, Nerd dos Números, Dr. Finança).
+   - **Provedores Customizados** (Groq, DeepSeek, etc).
+9. **Personalidades dos Agentes de IA**: Alterne entre os mesmos 6 consultores estratégicos:
+   - *Tony [Investidor Arrojado]*
+   - *Silas [Poupador Conservador]*
+   - *Sofia [Professora de Finanças]*
+   - *Arthur [Terapeuta Financeiro]*
+   - *Nerd dos Números [Pragmático]*
+   - *Dr. Finança [Equilibrado / Padrão]*
+
+---
+
+## 💾 Sincronização e Persistência de Dados
+
+O aplicativo lê e grava todas as informações em um arquivo estruturado de formato aberto `state.json`. 
+
+- O arquivo `state.json` é lido do diretório raiz.
+- Toda alteração que você faz no aplicativo em C# é sincronizada instantaneamente com o arquivo, garantindo que o seu progresso nunca seja perdido.
 
 ---
 
@@ -20,66 +43,23 @@ Este backend espelha com precisão a estrutura e o comportamento de controle de 
 
 Certifique-se de possuir instalado em sua máquina:
 - **[.NET 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)** ou superior.
-- Qualquer IDE moderna como **Visual Studio 2022**, **VS Code** ou **JetBrains Rider**.
 
 ---
 
-## 🚀 Como Executar
+## 🚀 Como Executar Muito Rápido
 
-### 1. Linha de Comando (CLI)
+Você pode usar o inicializador automático que criamos na pasta para você:
 
-Navegue até a pasta `csharp` e execute os comandos:
+### Pelo Inicializador Rápido (.bat)
+Basta dar um duplo clique no arquivo:
+👉 **`iniciar.bat`** (localizado dentro desta pasta `/csharp`)
+
+Isso irá automaticamente restaurar as dependências, compilar o programa em modo otimizado (Release) e abrir a aplicação de console interativa para você!
+
+### Pelo Terminal de Comando (CLI)
+Abra o terminal na pasta `csharp` e digite:
 
 ```bash
-# Restaurar pacotes do NuGet
-dotnet restore
-
-# Compilar o projeto
-dotnet build
-
-# Executar a API
-dotnet run
+# Restaurar dependências e executar o programa
+dotnet run -c Release
 ```
-
-Por padrão, a aplicação irá iniciar e escutar no endereço:
-👉 **http://localhost:5000** (ou a porta aleatória indicada pelo console).
-
-### 2. Documentação Swagger Interativa
-
-Com a API rodando, você pode acessar a interface interativa do Swagger para realizar requisições e testar os endpoints:
-👉 **http://localhost:5000/swagger**
-
----
-
-## 📂 Estrutura de Arquivos
-
-* 📄 **`FinancaAI.csproj`**: Definição do projeto contendo as referências ao OpenAPI e Swashbuckle (Swagger).
-* 📄 **`Models.cs`**: Definição fortemente tipada com C# 12 Records de todas as classes financeiras (`Account`, `Card`, `Transaction`, `Investment`, `Debtor`, `Creditor`, `Goal`, `AppSettings`).
-* 📂 **`Services/`**
-  - 📄 **`AiService.cs`**: O motor inteligente que mapeia o contexto financeiro, constrói os prompts de sistema baseados nos agentes selecionados e faz requisições assíncronas assépticas para o Gemini, OpenAI e Nvidia.
-* 📄 **`Program.cs`**: Configuração do Pipeline HTTP, CORS, injeção de dependências e mapeamento de rotas (Minimal APIs) para gerenciar o estado e o Chat de IA.
-
----
-
-## 🧭 Endpoints Disponíveis
-
-| Método | Rota | Descrição |
-| :--- | :--- | :--- |
-| **GET** | `/` | Retorna o status, versão da API e link para o Swagger. |
-| **GET** | `/api/state` | Carrega o estado completo do aplicativo (contas, cartões, metas, etc) do arquivo `state.json`. |
-| **POST** | `/api/state` | Grava o estado atualizado no arquivo `state.json`. |
-| **GET** | `/api/accounts` | Retorna a lista de contas financeiras registradas. |
-| **POST** | `/api/accounts` | Registra/atualiza uma conta e salva o progresso. |
-| **GET** | `/api/cards` | Retorna todos os cartões de crédito. |
-| **POST** | `/api/cards` | Registra/atualiza um cartão de crédito. |
-| **GET** | `/api/transactions` | Retorna o histórico de transações completas. |
-| **POST** | `/api/transactions` | Registra uma nova transação. |
-| **POST** | `/api/gemini/chat` | **Endpoint Unificado da IA**. Envia histórico, mensagem e contexto financeiro ao modelo configurado. |
-
----
-
-## 🔗 Conectando o Frontend React ao Backend C#
-
-Para rodar o frontend React se comunicando diretamente com o backend C#, basta abrir o arquivo `/src/components/AiAssistantView.tsx` (ou o arquivo de API correspondente) e ajustar a URL das requisições de `/api/gemini/chat` para `http://localhost:5000/api/gemini/chat`!
-
-Como o CORS já vem habilitado por padrão em todas as origens na API do C#, a comunicação funcionará de forma imediata e transparente.

@@ -1,10 +1,10 @@
 @echo off
-:: Finança AI Ultimate C# Edition - Iniciar Backend
-title Financa AI - Backend C# .NET 8
+:: Finança AI Ultimate C# Edition - Iniciar Programa
+title Finança AI - Aplicativo de Console C#
 chcp 65001 > nul
 
 echo =======================================================
-echo          INICIALIZADOR - FINANÇA AI BACKEND C#         
+echo          INICIALIZADOR - FINANÇA AI EM C#              
 echo =======================================================
 echo.
 
@@ -18,34 +18,32 @@ if %errorlevel% neq 0 (
     exit /b 1
 )
 
-echo [INFO] Restaurando pacotes NuGet...
+echo [INFO] Restaurando dependências NuGet...
 call dotnet restore
 if %errorlevel% neq 0 (
-    echo [AVISO] Falha na restauração automática de pacotes. Tentando compilar mesmo assim...
+    echo [AVISO] Falha na restauração. Tentando compilar mesmo assim...
     echo.
 )
 
-echo [INFO] Compilando o projeto...
-call dotnet build -c Debug
+echo [INFO] Compilando o aplicativo...
+call dotnet build -c Release > nul
 if %errorlevel% neq 0 (
-    echo [ERRO] Falha ao compilar a aplicação C#. Verifique o código.
+    echo [ERRO] Falha ao compilar o aplicativo C#. Verifique o código.
     echo.
     pause
     exit /b 1
 )
 
 echo.
-echo [SUCESSO] Aplicação compilada!
-echo [INFO] Iniciando o servidor de desenvolvimento C# em http://localhost:5000...
-echo Acesse a documentação Swagger interativa em: http://localhost:5000/swagger
-echo.
-echo Para fechar o servidor, pressione CTRL+C nesta janela.
+echo [SUCESSO] Aplicativo compilado com sucesso!
+echo [INFO] Iniciando o aplicativo standalone em C#...
 echo =======================================================
 echo.
 
-:: Executar
-call dotnet run
+:: Executar o aplicativo compilado
+call dotnet run -c Release
 
 echo.
-echo Servidor C# finalizado.
+echo Aplicativo Finança AI C# finalizado.
 pause
+
