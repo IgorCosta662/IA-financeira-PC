@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FinancaAI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d743ba709a8f4c12e2d343911892c81ccfee3f00")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b2a212f22b55989956db6299862ce34a368d057a")]
 [assembly: System.Reflection.AssemblyProductAttribute("FinancaAI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FinancaAI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
