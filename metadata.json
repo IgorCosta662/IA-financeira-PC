@@ -1,0 +1,6 @@
+{
+  "name": "Finança AI Ultimate",
+  "description": "Plataforma avançada de gestão financeira pessoal e empresarial com previsão preditiva de gastos, fluxo de caixa futuro consolidado e assistente inteligente IA integrado.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
